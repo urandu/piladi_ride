@@ -17,7 +17,26 @@ class Trip_data_model extends CI_Model{
             "longitude"=>$longitude,
             "latitude"=>$latitude
         );
-        
+
+        $this->db->insert("trip_data",$data);
+        return $this->db->insert_id();
+
+    }
+
+    public function get_trip_data($trip_id)
+    {
+        $this->db->where("trip_id",$trip_id);
+        $result=$this->db->get("trip_data");
+
+        if($result->num_rows()>0)
+        {
+            return $result->result();
+        }
+        else
+        {
+            return false;
+        }
+
     }
 
 

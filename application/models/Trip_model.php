@@ -44,14 +44,30 @@ class Trip_model extends CI_Model{
     {
         $this->db->where("status","1");
         $result=$this->db->get("trip");
-        return $result->result();
+        if($result->num_rows()>0)
+        {
+            return $result->result();
+        }
+        else
+        {
+            return false;
+        }
+
     }
 
     public function get_user_trips($user_id)
     {
         $this->db->where("user_id",$user_id);
         $result=$this->db->get("trip");
-        return $result->result();
+        if($result->num_rows()>0)
+        {
+            return $result->result();
+        }
+        else
+        {
+            return false;
+        }
+
     }
 
 
@@ -59,7 +75,15 @@ class Trip_model extends CI_Model{
     {
 
         $result=$this->db->get("trip");
-        return $result->result();
+        if($result->num_rows()>0)
+        {
+            return $result->result();
+        }
+        else
+        {
+            return false;
+        }
+
     }
 
 
