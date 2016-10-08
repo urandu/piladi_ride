@@ -21,9 +21,19 @@ class User_model extends CI_Model
             "user_status"=>$user_status
 
         );
+        $this->db->where("user_phone");
+        $result=$this->db->get("user");
+        if($result->num_rows()>0)
+        {
+            return false;
+        }
+        else
+        {
+            $this->db->insert("user",$data);
+            return $this->db->insert_id();
+        }
 
-        $this->db->insert("user",$data);
-        return $this->db->insert_id();
+
 
     }
 
@@ -61,13 +71,33 @@ class User_model extends CI_Model
     }
 
 
-    function get_user()
+    function get_user($user_id)
     {
+
+        $this->db->where("user_id",$user_id);
+        $result=$this->db->get("user");
+        if($result->num_rows()>0)
+        {
+            return $result->result()[0];
+        }
+        else
+        {
+            return false;
+        }
 
     }
 
     function get_all_user()
     {
+        $result=$this->db->get("user");
+        if($result->num_rows()>0)
+        {
+            return $result->result();
+        }
+        else
+        {
+            return false;
+        }
 
     }
 
