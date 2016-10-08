@@ -26,12 +26,30 @@ class Trip_model extends CI_Model{
 
     }
 
-    public function end_trip($trip_id,$end_time)
+    public function end_trip($trip_id)
     {
 
         $data=array(
-            "end_time"=>date()
+            "end_time"=>date("Y-m-d H:i:s"),
+            "status"=>"1"
         );
+
+        $this->db->where("trip_id",$trip_id);
+        $this->db->update("trip",$data);
+        return true;
+
+    }
+
+    public function get_all_active_trips()
+    {
+        $this->db->where("status","1");
+        $result=$this->db->get("trip");
+        return $result->result();
+    }
+
+    public function get_user_trips($user_id)
+    {
+        
     }
 
 }
