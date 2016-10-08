@@ -6,7 +6,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <title>Bootstrap Material</title>
+
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Material Design -->
+    <link href="<?php echo(base_url('public')); ?>dist/css/bootstrap-material-design.css" rel="stylesheet">
+    <link href="<?php echo(base_url('public')); ?>dist/css/ripples.min.css" rel="stylesheet">
+
+
+    <link href="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
