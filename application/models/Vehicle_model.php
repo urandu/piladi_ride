@@ -24,5 +24,36 @@ class Vehicle_model extends CI_Model{
 
     }
 
+    public function get_vehicle($vehicle_id)
+    {
+        $this->db->where("vehicle_id",$vehicle_id);
+        $result=$this->db->get("vehicle");
+
+        if($result->num_rows()>0)
+        {
+            return $result->result()[0];
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    public function get_all_vehicles()
+    {
+
+        $result=$this->db->get("vehicle");
+
+        if($result->num_rows()>0)
+        {
+            return $result->result();
+        }
+        else
+        {
+            return false;
+        }
+
+    }
 
 }
