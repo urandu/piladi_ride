@@ -22,12 +22,16 @@ class Trip_model extends CI_Model{
         );
 
         $this->db->insert("trip",$data);
-        return $this->db->last
+        return $this->db->inser_id();
 
     }
+
     public function end_trip($trip_id,$end_time)
     {
 
+        $data=array(
+            "end_time"=>date()
+        );
     }
 
 }
