@@ -9,7 +9,7 @@
 class Vehicle_model extends CI_Model{
 
 
-    public function new_vehicle()
+    public function new_vehicle($vehicle_type,$vehicle_alias,$vehicle_registration,$vehicle_description)
     {
 
     }
