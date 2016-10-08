@@ -255,9 +255,6 @@ footer p {
 </head>
 <body>
 
-
-<div class="container">
-
 <div class="bs-component">
     <div class="navbar navbar-default">
         <div class="container-fluid">
@@ -310,6 +307,9 @@ footer p {
         </div>
     </div>
 </div>
+<div class="container">
+
+
 
 <!-- Navbar
 ================================================== -->
