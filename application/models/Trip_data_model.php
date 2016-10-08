@@ -6,7 +6,7 @@
  * Time: 2:00 PM
  */
 
-class Vehicle_model extends CI_Model{
+class Trip_data_model extends CI_Model{
 
 
     public function new_vehicle($vehicle_type,$vehicle_alias,$vehicle_registration,$vehicle_description)
