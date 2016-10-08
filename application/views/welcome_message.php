@@ -21,8 +21,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Material Design -->
-    <link href="<?php echo(base_url('public')); ?>dist/css/bootstrap-material-design.css" rel="stylesheet">
-    <link href="<?php echo(base_url('public')); ?>dist/css/ripples.min.css" rel="stylesheet">
+    <link href="<?php echo(base_url('public/')); ?>dist/css/bootstrap-material-design.css" rel="stylesheet">
+    <link href="<?php echo(base_url('public/')); ?>dist/css/ripples.min.css" rel="stylesheet">
 
 
     <link href="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
