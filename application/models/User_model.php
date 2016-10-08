@@ -30,22 +30,36 @@ class User_model extends CI_Model
     function update_user($user_id,$user_name,$user_password,$user_email,$user_phone,$user_status=1)
     {
 
-        $data=array(
-            "user_name"=>$user_name,
-            "user_password"=>$user_password,
-            "user_email"=>$user_email,
-            "user_phone"=>$user_phone,
-            "user_status"=>$user_status
+        if($user_password=="previous")
+        {
+            $data=array(
+                "user_name"=>$user_name,
+                "user_password"=>$user_password,
+                "user_email"=>$user_email,
+                "user_status"=>$user_status
 
-        );
+            );
+        }
+        else
+        {
+            $data=array(
+                "user_name"=>$user_name,
+                "user_password"=>$user_password,
+                "user_email"=>$user_email,
+                "user_phone"=>$user_phone,
+                "user_status"=>$user_status
+
+            );
+        }
+
+        $this->db->where("user_id",$user_id);
+        $this->db->update("user",$data);
+
+        return true;
 
 
     }
 
-    function deactivate_user()
-    {
-
-    }
 
     function get_user()
     {
