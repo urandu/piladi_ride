@@ -29,12 +29,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-    padding-top: 50px
+    padding-top: 0px
 }
 
-#banner {
-    border-bottom: none
-}
+
 
 .page-header h1 {
     font-size: 4em
@@ -263,7 +261,7 @@ footer p {
 
 <!-- Navbar
 ================================================== -->
-<div class="bs-docs-section ">
+<div class="bs-docs-section clearfix">
     <div class="row">
         <div class="col-md-12">
 
