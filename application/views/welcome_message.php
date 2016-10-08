@@ -263,12 +263,9 @@ footer p {
 
 <!-- Navbar
 ================================================== -->
-<div class="bs-docs-section clearfix">
+<div class="bs-docs-section ">
     <div class="row">
         <div class="col-md-12">
-            <div class="page-header">
-                <h1 id="navbar">Navbar</h1>
-            </div>
 
             <div class="bs-component">
                 <div class="navbar navbar-default">
