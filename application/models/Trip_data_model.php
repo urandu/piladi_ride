@@ -9,51 +9,17 @@
 class Trip_data_model extends CI_Model{
 
 
-    public function new_vehicle($vehicle_type,$vehicle_alias,$vehicle_registration,$vehicle_description)
+    public function new_trip_data($trip_id,$longitude,$latitude)
     {
 
         $data=array(
-            "vehicle_type"=>$vehicle_type,
-            "vehicle_alias"=>$vehicle_alias,
-            "vehicle_registration"=>$vehicle_registration,
-            "vehicle_description"=>$vehicle_description
+            "trip_id"=>$trip_id,
+            "longitude"=>$longitude,
+            "latitude"=>$latitude
         );
-
-        $this->db->insert("vehicle",$data);
-        return $this->db->insert_id();
-
+        
     }
 
-    public function get_vehicle($vehicle_id)
-    {
-        $this->db->where("vehicle_id",$vehicle_id);
-        $result=$this->db->get("vehicle");
 
-        if($result->num_rows()>0)
-        {
-            return $result->result()[0];
-        }
-        else
-        {
-            return false;
-        }
-
-    }
-
-    public function get_all_vehicles()
-    {
-
-        $result=$this->db->get("vehicle");
-
-        if($result->num_rows()>0)
-        {
-            return $result->result();
-        }
-        else
-        {
-            return false;
-        }
-
-    }
 
 }
