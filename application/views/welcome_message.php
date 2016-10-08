@@ -136,35 +136,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     })();
 
 </script>
-<script src="dist/js/ripples.min.js"></script>
-<script src="dist/js/material.min.js"></script>
+<script src="<?php echo(base_url('public/')); ?>dist/js/ripples.min.js"></script>
+<script src="<?php echo(base_url('public/')); ?>dist/js/material.min.js"></script>
 <script src="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.js"></script>
 
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
-<script>
-    $(function () {
-        $.material.init();
-        $(".shor").noUiSlider({
-            start: 40,
-            connect: "lower",
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
-
-        $(".svert").noUiSlider({
-            orientation: "vertical",
-            start: 40,
-            connect: "lower",
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
-    });
-</script>
 </body>
 </html>
 
