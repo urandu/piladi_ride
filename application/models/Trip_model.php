@@ -49,7 +49,18 @@ class Trip_model extends CI_Model{
 
     public function get_user_trips($user_id)
     {
-        
+        $this->db->where("user_id",$user_id);
+        $result=$this->db->get("trip");
+        return $result->result();
     }
+
+
+    public function get_all_trips()
+    {
+
+        $result=$this->db->get("trip");
+        return $result->result();
+    }
+
 
 }
