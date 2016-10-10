@@ -9,7 +9,7 @@
 class Trip_model extends CI_Model{
 
 
-    public function new_trip($vehicle_id,$user_id,$status=1)
+    public function new_trip($vehicle_id,$user_id,$status="1")
     {
         /*
          * status==1 if trip is in progress,
