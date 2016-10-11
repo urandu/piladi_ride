@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Trip extends CI_Controller {
+class Vehicle extends CI_Controller {
 
 
 	public function index()
@@ -10,7 +10,7 @@ class Trip extends CI_Controller {
         echo("Welcome to the trip controller");
 	}
 
-    public function new_trip()
+    public function new_vehicle()
     {
         /*
          * status==1 if trip is in progress,
