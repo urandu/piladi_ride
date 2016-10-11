@@ -56,4 +56,28 @@ class Vehicle extends CI_Controller {
     }
 
 
+    public function get_all_vehicles()
+    {
+
+        $this->load->model("vehicle_model");
+        $vehicles=$this->vehicle_model->get_all_vehicles();
+
+        if($vehicles!==false)
+        {
+            echo(json_encode(array(
+                "status"=>"ok",
+                "vehicles"=>$vehicles
+            )));
+        }
+        else
+        {
+            echo(json_encode(array(
+                "status"=>"error",
+                "vehicles"=>"vehicle not found"
+            )));
+        }
+
+    }
+
+
 }
