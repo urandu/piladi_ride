@@ -61,6 +61,30 @@ class Trip extends CI_Controller {
 
     }
 
-    
+
+
+    public function get_trip_data()
+    {
+        $trip_id=$this->input->post("trip_id");
+        $this->load->model("trip_data_model");
+        $trip_data=$this->trip_data_model->new_trip_data($trip_id);
+
+        if($trip_data!==false)
+        {
+            echo(json_encode(array(
+                "status"=>"ok",
+                "trip_data"=>$trip_data
+            )));
+        }
+        else
+        {
+            echo(json_encode(array(
+                "status"=>"error",
+                "trip_data"=>"no data"
+            )));
+        }
+
+    }
+
 
 }
